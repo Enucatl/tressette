@@ -1,0 +1,10 @@
+1) quattro giocatori in coppie di due giocano secondo le regole del
+tressette.
+1.1) distribuzione delle carte (lista) a ogni giocatore. semi, valori in
+classe carta.
+1.2) classe giocatore, ha una squadra, le carte (mano) e memoria delle carte giocate, e
+poi sceglie (anche a caso) una carta da giocare al suo turno.
+1.3) classe passata, battuta. La passata deve contenere i giocatori, i punti
+conquistati dalle squadre. Chiama la battuta. La passata chiama un giocatore
+per volta perché giochi la carta.
+2) 

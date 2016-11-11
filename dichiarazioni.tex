@@ -1,0 +1,425 @@
+\documentclass[italian,a4paper]{article}
+\usepackage{babel,amsmath,amssymb,amsthm,url}
+\usepackage[text={6in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\frenchspacing
+\pagestyle{empty}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%------------- impostazioni environment teoremi
+\theoremstyle{definition}
+\newtheorem{art}{Art.}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\labelitemi}{--}
+%------------- nuovi environment senza spazi
+%\newenvironment{packeditem}{
+%\begin{itemize}
+%  \setlength{\itemsep}{1pt}
+%  \setlength{\parskip}{0pt}
+%  \setlength{\parsep}{0pt}
+%}{\end{itemize}}
+%\newenvironment{packedenumeration}{
+%\begin{enumerate}
+%  \setlength{\itemsep}{1pt}
+%  \setlength{\parskip}{0pt}
+%  \setlength{\parsep}{0pt}
+%}{\end{enumerate}}
+%\newenvironment{packeddescription}{
+%\begin{enumerate}
+%   \setlength{\itemsep}{1pt}
+%   \setlength{\parskip}{0pt}
+%   \setlength{\parsep}{0pt}
+%}{\end{enumerate}}
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\newcommand{\eqnum}{\setcounter{equation}{0}}
+%---------
+%---------
+
+\title{Codice del tressette}
+\author{\url{www.fitres.it}}
+\date{}
+
+\begin{document}
+\maketitle
+\section*{Le dichiarazioni}
+
+\setcounter{art}{35}
+\begin{art}
+Il diritto di eseguire una o più dichiarazioni espresse spetta solo al
+giocatore di mano, al quale non è però consentito di eseguire o completare
+alcuna dichiarazione dopo che abbia eseguito la giocata di battuta.
+\end{art}
+
+\begin{art}
+Ciascuna dichiarazione può riferirsi: esplicitamente, al palo di pigliata o
+al palo al quale ci si accinge a giocare;  genericamente, ad uno o più pali.
+\end{art}
+
+\subsection*{Dichiarazioni relative al palo di pigliata}
+
+\begin{art}
+Con riferimento al palo di pigliata, le dichiarazioni consentite possono
+essere:
+\begin{itemize}
+    \item \emph{(ho fatto) questo piombo}, quando la presa sia stata effettuata
+con l’unica o con l’ultima carta del palo in suo possesso;
+    \item \emph{(sono) liscio qui}, quando ancora si possegga almeno una carta
+soggetta rispetto alle carte possedute al palo dagli altri giocatori.
+\end{itemize}
+\end{art}
+
+\subsection*{Dichiarazioni relative a pali diversi da quello di pigliata e di giocata}
+
+\begin{art}
+Con riferimento ai pali diversi da quello di pigliata e da quello al quale
+ci si accinge a giocare, le dichiarazioni consentite sono:
+\begin{itemize}
+    \item \emph{feci un piombo}, per comunicare di aver esaurito le carte ad uno o
+più pali diversi da quelli ai quali si sia giocato prima della battuta nella
+quale il giocatore ha rilevato la mano.
+
+   \item \emph{(sono) faglio a un palo}, per comunicare che, in origine o
+(indistintamente) al momento della dichiarazione, si era o si è sprovvisti
+di carte ad uno o più pali.
+
+\item       \emph{faglio al (palo del) mio compagno}, per comunicare di non
+possedere alcuna carta al palo dove si ritiene che il compagno, attraverso
+accuse, sfide, o scarti dello stesso o per altre circostanze di gioco, abbia
+interesse; tale dichiarazione non è consentita se al palo si posseggono solo
+carte sovrane.
+
+\item       \emph{liscio al (palo del)  mio compagno}, per comunicare il possesso di
+almeno una carta non sovrana al palo dove si ritiene che il compagno,
+attraverso accuse, sfide o scarti dello stesso o per altre circostanze di
+gioco, abbia interesse.
+\end{itemize}
+\end{art}
+
+\begin{art}
+L’erronea dichiarazione di faglio o di liscio al palo del compagno eseguita
+in buona fede non è sanzionabile.
+\end{art}
+
+\subsection*{Dichiarazioni relative al palo di giocata}
+
+\begin{art}
+Con riferimento al palo al quale ci si accinge a giocare, è consentito
+dichiarare:
+
+
+\begin{itemize}
+\item       il possesso di una Napoletana;
+\item       il possesso di un gruppo di due carte di tressette;
+\item       il possesso di una singola carta di tressette;
+\item       il possesso del Re;
+\item       l’eventuale grado sovrano della carta che si gioca;
+\item         la semplice lunghezza del palo.
+\end{itemize}
+\end{art}
+
+\subsection*{La dichiarazione della Napoletana}
+
+\begin{art}
+Il giocatore che intende dichiarare il possesso di una Napoletana al palo di
+giocata può farlo espressamente, giocando una qualsiasi carta e precisando
+la lunghezza del palo.
+\end{art}
+
+\subsection*{Le sfide}
+
+\begin{art}
+Si definisce sfida una dichiarazione relativa ad un palo con due carte di
+tressette o ad un palo almeno terzo con una sola carta di tressette.
+\end{art}
+
+\begin{art}
+Se si possiede una sola di carta di tressette di un palo almeno terzo, la
+sfida può essere lanciata giocando qualsiasi carta semplice.
+\end{art}
+
+\begin{art}
+Se si posseggono due carte di tressette (che vanno entrambe dichiarate):
+
+\begin{itemize}
+\item  se il palo è secondo, la dichiarazione comporta l’obbligo di giocare
+quella superiore, salvo che il palo sia costituito dal Venticinque, nel qual
+caso a tale obbligo si sostituisce quello di dover giocare le due carte
+l’una di seguito all’altra;
+
+\item  se il palo dichiarato è terzo, resta solo esclusa la possibilità di
+giocare una carta semplice;
+
+\item   se il palo è più che terzo, si può eseguire la dichiarazione giocando
+qualsiasi carta. 
+\end{itemize}
+\end{art}
+
+\begin{art}
+Nelle sfide di Ventinove, di Ventotto e di Venticinque non è mai consentito
+dichiarare anche l’eventuale possesso del Re che non venga giocato.
+\end{art}
+
+\subsection*{La dichiarazione del Re}
+
+\begin{art}
+La dichiarazione relativa al possesso del Re, senza giocarlo, è consentita
+solo giocando una carta semplice di un palo almeno terzo senza carte di
+tressette.
+\end{art}
+
+\subsection*{La dichiarazione di sovranità della carta giocata}
+
+\begin{art}
+La dichiarazione di sovranità della carta giocata può riguardare sia una
+carta diventata sovrana in assoluto sia una carta diventata tale perch\'e
+quella o quelle effettivamente sovrane sono possedute anch’esse dal
+giocatore e non sono n\'e carta di tressette n\'e il Re.
+\end{art}
+
+\begin{art}
+L’erronea dichiarazione di sovranità eseguita in buona fede non è
+sanzionabile salva l’ipotesi che la sovranità della carta dipenda dal
+possesso di una carta di tressette o del Re.
+\end{art}
+
+\begin{art}
+Chi esegue la dichiarazione di sovranità deve sempre precisare la lunghezza
+del palo.
+\end{art}
+
+\subsection*{La semplice dichiarazione di lunghezza del palo}
+
+\begin{art}
+La semplice dichiarazione di lunghezza del palo non può essere eseguita se
+tra le carte non giocate ve ne sia una di tressette o il Re.
+\end{art}
+
+\begin{art}
+Se si dichiara un palo secondo è obbligatorio giocare la carta di grado
+superiore, anche se le due carte sono consecutive di grado.
+\end{art}
+
+\begin{art}
+Se si vuol rendere noto lo stato di unica o di ultima carta del palo a cui
+si gioca,  è sufficiente dichiarare \emph{sola}, sia che si tratti di carta
+soggetta, sia che si tratti di carta sovrana; nel secondo caso, però, è
+possibile dichiarare \emph{piombo}.
+
+Al riguardo si richiama e si conferma la previsione dell’art. 49.
+\end{art}
+
+\subsection*{Altre norme concernenti le dichiarazioni relative al palo di giocata}
+
+\begin{art}
+Se una qualsiasi dichiarazione viene eseguita senza precisare la lunghezza
+del palo, si sottintende che il palo sia esattamente terzo; se il palo è
+quarto o più che quarto, occorre precisare ulteriormente la dichiarazione
+aggiungendo alla stessa, rispettivamente: \emph{lungo} o  \emph{lunghissimo}.
+\end{art}
+
+\begin{art}
+Il giocatore che non reputi opportuno condizionare la propria giocata
+all’integrale rispetto delle norme contenute nei precedenti articoli, deve
+rinunciare ad eseguire la dichiarazione relativa al palo di giocata.
+\end{art}
+
+\begin{art}
+Nel lanciare una sfida e, più in generale, nell’eseguire una qualsiasi
+dichiarazione, occorre usare le espressioni, anche di tipo gestuale, in uso
+al tavolo.
+\end{art}
+
+\begin{art}
+Se al tavolo si utilizzano, per la stessa fattispecie dichiarativa, più
+espressioni alternative, è corretto che ciascun giocatore adoperi sempre la
+stessa espressione; ciò al fine di non generare il dubbio che a
+dichiarazioni variamente formulate corrispondano fattispecie secondarie
+diverse che non possono essere palesate.
+\end{art}
+
+\begin{art}
+Altre norme riportate nelle successive parti del codice prevedono
+limitazioni alla possibilità di eseguire le precedenti dichiarazioni.
+\end{art}
+
+\section*{Gioco ordinario: norme moderne}
+\subsection*{Norme che regolano le dichiarazioni}
+\setcounter{art}{145}
+\begin{art}
+S’intende qui confermato e richiamato l’intero contenuto degli articoli da
+36 a 57 del presente Codice, fatta esclusione per quelle norme eventualmente
+in contrasto con quanto ulteriormente o diversamente sancito negli articoli
+che seguono.
+\end{art}
+
+\begin{art}
+Il giocatore che inizia tacitamente una battuta con una carta (semplice o di
+Tressette) piombo, sola, lisciante, terza, lunga o lunghissima non può
+palesare neppure parzialmente lo stato del palo dopo che abbia eventualmente
+conquistata la pigliata, e cioè non può dire, accingendosi a giocare ad
+altro palo: ho fatto questo piombo oppure sono liscio qui.
+\end{art}
+
+\begin{art}
+Può però, avendo conseguito la pigliata su una sua giocata tacita, rigiocare
+– anche di seguito - allo stesso palo ancora tacitamente o anche utilizzando
+una delle formule di cui al 
+\end{art}
+
+\begin{art}
+E potrà anche (riprendendo successivamente la mano su una giocata da altri
+iniziata, anche ad un diverso palo) regolarmente riferirsi al palo al quale
+aveva giocato in silenzio utilizzando una delle formule di cui al
+\end{art}
+
+\begin{art}
+Le dichiarazioni possibili con riferimento al palo di giocata sono le
+seguenti:
+
+\begin{enumerate}
+    \item        \emph{sola} giocando l’unica o l’ultima carta del palo, purch non
+sovrana
+
+\item        \emph{piombo} giocando l’unica o l’unica carta del palo se trattasi di
+carta (anche notoriamente) sovrana
+
+\item        \emph{si liscia} giocando la carta di tressette (sovrana o soggetta) o,
+comunque, la carta di grado superiore (sovrana o soggetta) ad un palo ove è
+presente solo un’altra carta semplice
+
+\item        \emph{è mia e si liscia} giocando la carta sovrana di tressette o,
+comunque, la carta sovrana di grado superiore ad un palo ove è presente solo
+un’altra carta semplice
+
+\item        \emph{terzo} giocando una carta sovrana o soggetta diversa dal Re ad un
+palo ove siano presenti altre due carte semplici tra cui può esserci o non
+esserci il Re
+
+\item       \emph{si liscia due volte} giocando la carta di tressette (sovrana o
+soggetta) o, comunque, la carta di grado superiore (sovrana o soggetta) ad
+un palo ove sono  presenti altre due carte semplici
+
+\item        \emph{è mia e si liscia due volte} giocando la carta sovrana di
+tressette o, comunque, la carta sovrana di grado superiore ad un palo ove
+sono presenti altre due carte semplici
+
+\item       \emph{è mia, terzo} giocando una carta di tressette sovrana o una carta
+semplice sovrana o soggetta esclusivamente ad una o ad entrambe le altre due
+carte semplici possedute dal giocatore ad un palo terzo 
+
+\item        \emph{vero doppio liscio} o \emph{terzo di Re} giocando una qualsiasi carta
+semplice di un palo terzo senza carte di tressette con il Re che non viene
+giocato
+
+\item      \emph{lungo} giocando una carta sovrana o soggetta diversa dal Re ad un
+palo ove siano presenti altre tre carte semplici tra cui può esserci o non
+esserci il Re
+
+\item     \emph{si liscia, lungo} giocando la carta di tressette (sovrana o
+soggetta) o, comunque, la carta di grado superiore (sovrana o soggetta) ad
+un palo ove sono  presenti altre tre carte semplici
+
+\item      \emph{è mia, lungo} giocando una carta di tressette sovrana o una carta
+semplice sovrana o soggetta esclusivamente ad una o a più carte semplici
+possedute dal giocatore ad un palo quarto 
+
+\item      \emph{lungo tutta la Napoletana} o \emph{lungo di Re} giocando una qualsiasi
+carta semplice di un palo quarto senza carte di tressette con il Re che non
+viene giocato
+
+\item      \emph{lunghissimo} giocando una carta sovrana o soggetta diversa dal Re
+ad un palo ove siano presenti almeno altre quattro carte semplici tra cui
+può esserci o non esserci il Re
+
+\item      \emph{si liscia, lunghissimo} giocando la carta di tressette (sovrana o
+soggetta) o, comunque, la carta di grado superiore (sovrana o soggetta) ad
+un palo ove sono  presenti almeno altre quattro carte semplici
+
+\item      \emph{è mia, lunghissimo} giocando una carta di tressette sovrana o una
+carta semplice sovrana o soggetta esclusivamente ad una o a più carte
+semplici possedute dal giocatore ad un palo quinto
+
+\item      \emph{lunghissimo tutta la Napoletana} o \emph{lunghissimo di Re} giocando una
+qualsiasi carta semplice di un palo almeno quinto senza carte di tressette
+con il Re che non viene giocato
+
+\item      \emph{liscio e busso} o \emph{Asso terzo} giocando una qualsiasi carta semplice
+di un palo terzo con l’Asso
+
+\item      \emph{liscio e busso lungo} o \emph{Asso lungo} giocando una qualsiasi carta
+semplice di un palo quarto con l’Asso
+
+\item      \emph{liscio  busso lunghissimo} o \emph{Asso lunghissimo} giocando una
+qualsiasi carta semplice di un palo almeno quinto con l’Asso
+
+\item      \emph{ribusso} o \emph{Due terzo} giocando una qualsiasi carta semplice di un
+palo terzo con il Due
+
+\item      \emph{ribusso lungo} o \emph{Due lungo} giocando una qualsiasi carta semplice
+di un palo quarto con il Due
+
+\item      \emph{ribusso lunghissimo} o \emph{Due lunghissimo} giocando una qualsiasi
+carta semplice di un palo almeno quinto con il Due
+
+\item      \emph{busso} o \emph{Tre terzo} giocando una qualsiasi carta semplice di un
+palo terzo con il Tre
+
+\item      \emph{busso lungo} o \emph{Tre lungo} giocando una qualsiasi carta semplice di
+un palo quarto con il Tre
+
+\item      \emph{busso lunghissimo} o \emph{Tre lunghissimo} giocando una qualsiasi carta
+semplice di un palo almeno quinto con il Tre
+
+\item      \emph{liscio} o \emph{la migliore} o \emph{ventotto piombo} giocando il due di un
+ventotto piombo
+
+\item      \emph{doppio liscio} o \emph{la migliore} o \emph{ventotto terzo} giocando il Due o
+l’Asso di un ventotto terzo
+
+\item      \emph{la migliore, lungo} o \emph{ventotto lungo} giocando una qualsiasi carta
+di un ventotto lungo
+
+\item      \emph{la migliore, lunghissimo} o \emph{ventotto lunghissimo} giocando una
+qualsiasi carta di un ventotto lunghissimo
+
+\item      \emph{liscio} o \emph{la buona} o \emph{ventinove piombo} giocando il Tre di un
+ventinove piombo
+
+\item      \emph{doppio liscio} o \emph{la buona} o \emph{ventinove terzo} giocando il Tre o
+l’Asso di un ventinove terzo
+
+\item      \emph{la buona, lungo} o \emph{ventinove lungo} giocando una qualsiasi carta
+del ventinove lungo
+
+\item      \emph{la buona, lunghissimo} o \emph{ventinove lunghissimo} giocando una
+qualsiasi carta di un ventinove lunghissimo
+
+\item      \emph{è mio liscio e piombo} o \emph{venticinque piombo} giocando
+consecutivamente il Due ed il Tre di un venticinque piombo
+
+\item      \emph{è mio terzo} o \emph{venticinque terzo} giocando il Due di un venticinque
+terzo con o senza il Re
+
+\item      \emph{è mio e voglio l’Asso} o \emph{venticinque terzo di Re} giocando il Due
+di un venticinque terzo con il Re
+
+\item      \emph{è mio, lungo} o \emph{venticinque lungo} giocando una qualsiasi carta di
+un venticinque lungo con o senza il Re
+
+\item      \emph{è mio, lungo e voglio l’Asso} o \emph{venticinque lungo di Re} giocando
+una qualsiasi carta diversa dal Re di un venticinque lungo con il Re
+
+\item      \emph{è mio, lunghissimo} o \emph{venticinque lunghissimo} giocando una
+qualsiasi carta di un venticinque lunghissimo con o senza il Re
+
+\item      \emph{è mio, lunghissimo e voglio l’Asso} o \emph{venticinque
+    lunghissimo di Re} giocando una qualsiasi carta diversa dal Re di un venticinque lunghissimo
+con il Re.
+\end{enumerate}
+\end{art}
+\end{document}

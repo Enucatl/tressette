@@ -1,0 +1,605 @@
+\documentclass[italian,a4paper]{book}
+\usepackage{babel,amsmath,amssymb,amsthm,url}
+\usepackage[text={6in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%------------- impostazioni environment teoremi
+\theoremstyle{definition}
+\newtheorem{art}{Art.}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\labelitemi}{--}
+%------------- nuovi environment senza spazi
+\newenvironment{packeditem}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+\newenvironment{packedenum}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+\newenvironment{packeddescription}{
+\begin{description}
+   \setlength{\itemsep}{1pt}
+   \setlength{\parskip}{0pt}
+   \setlength{\parsep}{0pt}
+}{\end{description}}
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\newcommand{\eqnum}{\setcounter{equation}{0}}
+%---------
+%---------
+\title{Codice del tressette}
+\author{Olimpiadi Galileiane 2010\\
+\small{Tratto dal regolamento Fitres}}
+\date{}
+\begin{document}
+\maketitle
+\chapter{Norme generali}
+\section{Le carte}
+\subsection{I tipi di carte}
+\begin{art}
+    Il tressette, i giochi affini e i giochi derivati  si praticano preferibilmente con un mazzo di carte \emph{napoletane}; con l'accordo di tutti i giocatori è però possibile adoperare altri tipi di carte in uso nelle diverse regioni italiane o, anche, le carte c.d. \emph{francesi}.
+\end{art}
+\begin{art} \hspace*{\fill}
+    \begin{packeditem}
+\item Le carte sono quaranta, divise in quattro pali: danari, spade, coppe e bastoni.
+\item Tra i pali non esiste gerarchia ma solo, per determinate finalità di carattere tecnico o regolamentare, un ordine convenzionale che corrisponde a quello appena seguito.
+\item Ciascuno dei suddetti pali si compone di dieci carte: l'Asso (ossia l'Uno), il Due, il Tre, il Quattro, il Cinque, il Sei, il Sette, l'Otto (rappresentato da una Donna o da un Fante e così denominato), il Nove (rappresentato da un Cavaliere a  cavallo e più semplicemente denominato Cavallo) ed il Dieci (rappresentato da un Re e così denominato).
+\item Volendo riferirsi a ciascuna carta in forma sintetica scritta, se ne
+    indica il palo con la iniziale minuscola (d, s, c, b) seguita,
+    rispettivamente da 1 a 10, da una dei seguenti caratteri alfanumerici: A, 2,
+    3, 4, 5, 6, 7, D, C, R.
+    \end{packeditem}
+\end{art}
+\begin{art}
+    Nel caso si utilizzi un mazzo di carte francesi,
+    \begin{packeditem}
+\item   ai pali di denari, spade, coppe, bastoni delle carte napoletane corrispondono rispettivamente i seguenti semi: cuori, picche, quadri, fiori;
+\item   le carte dall'Otto al Dieci devono essere eliminate ed il K, il Q ed il J corrispondono al Re, alla Donna ed al Cavallo delle carte napoletane.
+    \end{packeditem}
+\end{art}
+\subsection{Gradi, valori e definizioni delle carte}
+\begin{art}
+    Il grado delle carte in ciascun palo per ordine decrescente è il seguente: il Tre, il Due, l'Asso, il Re, il Cavallo, la Donna, il Sette, il Sei, il Cinque ed il Quattro.
+\end{art}
+\begin{art}\label{carta.sovrana}
+    Il Tre è la carta naturalmente sovrana in ciascun palo; ciascuna delle altre può divenire tale se tutte le carte di grado superiore sono uscite; una carta non sovrana si definisce soggetta. 
+\end{art}
+\begin{art}
+    Le carte dichiarabili sono esclusivamente il Tre, il Due, l'Asso e (limitatamente) il Re.
+\end{art}
+\begin{art}
+    Il Tre, il Due e l'Asso sono definite carte di tressette, e, in particolare, il Due e l'Asso sono definite carte secondarie di tressette; le altre sono definite carte semplici, distinguendosi a loro volta in figure (Re, Donna e Cavallo) e cartine (Sette, Sei, Cinque e Quattro). \`E possibile riferirsi al Tre anche con la definizione di la migliore; altre definizioni previste sono: la buona, riferendosi al Due, e le buone riferendosi al Due e all'Asso.
+\end{art}
+\begin{art}
+    Il gruppo delle tre Carte di Tressette di uno stesso palo costituisce una Napoletana, quello delle tre figure una Terza Reale, quello formato dal Tre e dal Due un Venticinque, quello dal Due e dell'Asso un Ventotto, e quello dal Tre e dall'Asso un Ventinove.
+\end{art}
+\begin{art}
+    Ciascun Asso vale un punto; le altre venti carte costituite dalle otto Carte di Tressette e dalle dodici figure valgono ciascuna un terzo di punto; le frazioni di punto non si conteggiano.
+\end{art}
+\section{Il gioco}
+\begin{art}
+    Il tressette e i giochi ad esso affini o derivati sono giochi di carte in cui le parti contrapposte si contendono la vittoria eseguendo giocate e formulando eventuali dichiarazioni a mezzo delle quali si rende possibile e lecito comunicare in maniera più o meno estesa lo stato delle proprie carte.
+\end{art}
+\begin{art}
+    Sia le giocate che le dichiarazioni devono essere sempre conformi a quanto previsto nel presente Codice.
+\end{art}
+\subsection{Il gioco della carta e la passata}
+\begin{art}
+    Lo scopo del gioco consiste nel cercare di conquistare il massimo degli undici punti di volta in volta disponibili, dei quali: dieci sono  portati dai valori delle carte ed uno dal valore dell'ultima presa.
+\end{art}
+\begin{art}
+    Il gioco si svolge in passate, una o più a seconda del punteggio fissato per la vittoria; tutte le passate si esauriscono con la giocata delle quaranta carte, tranne l'ultima che può finire anticipatamente per il raggiungimento del punteggio fissato per la vittoria.
+\end{art}
+\subsubsection{La passata: attività preliminari}
+\begin{art}\label{passata.iniz}
+    Propedeutiche allo svolgimento di ogni passata sono le seguenti operazioni: la mischiata, l'alzata e la distribuzione.
+    Le tre operazioni sono tutte obbligatorie.
+\end{art}
+\begin{art}
+    Le carte vanno mischiate prima della distribuzione; la mischiata è consentita a tutti i giocatori ma chi deve distribuirle, ossia il cartaro, ha il diritto di mischiarle per ultimo.
+\end{art}
+\begin{art} \hspace*{\fill}
+    \begin{packeditem}
+\item Dopo che le carte sono state mischiate, il mazzo di carte deve essere diviso in due porzioni accidentali; questa operazione va fatta dal giocatore che si trova alla sinistra del distributore.
+\item L'alzata è sempre obbligatoria e, una volta effettuata, non è più consentito a nessun giocatore di rimischiare le carte. Nel fare l'alzata bisogna evitare che una delle due porzioni, in cui resta diviso il mazzo, contenga meno di cinque carte; altrimenti l'alzata deve essere ripetuta.
+    \end{packeditem}
+\end{art}
+\begin{art}
+    Il distributore, dopo l'alzata, deve riunire di nuovo i due monti in uno solo, mettendo poi di sopra quello che prima era di sotto; poi deve distribuire le carte, per giro a destra, nel numero e con le modalità previste per i vari giochi prendendole dalla parte superiore del monte.
+\end{art}
+\subsubsection{La passata: svolgimento}
+\begin{art} \hspace*{\fill}
+    \begin{packeditem}
+\item Ogni passata consta di tante battute quante sono le carte distribuite a ciascun giocatore.
+\item Per battuta s'intende il complesso della carta giocata inizialmente da un giocatore (carta di battuta) e delle carte (di risposta) giocate singolarmente da ciascuno degli altri giocatori.
+\item La battuta inizia ufficialmente con la giocata o con una qualsiasi dichiarazione eseguita dal giocatore di mano e cessa con il deposito della pigliata.
+    \end{packeditem}
+\end{art}
+\begin{art}
+    Una volta che la carta giocata ha toccato il tavolo o se, anche senza averlo toccato, è stata vista da uno o più giocatori, la stessa non può più essere ritirata. Può esserne però corretto, con immediatezza, l'eventuale errato palesamento.
+\end{art}
+\begin{art}   \hspace*{\fill}
+    \begin{packeditem}
+\item \`E vietato giocare, tranne il caso di messa a terra definitiva
+    (disciplinato dagli articoli da~\ref{messa.terra} a~\ref{fine.terra}), contemporaneamente più di una carta.
+\item Non è mai consentito evidenziare di aver già pronta la carta da giocare prima che sia giunto il proprio turno di gioco e, tanto meno, può essere consentito a chi abbia commesso tale infrazione di aggravare il proprio comportamento sostituendo tale carta alla luce delle carte nel frattempo giocate o delle dichiarazioni verbali eseguite dagli altri giocatori.
+    \end{packeditem}
+\end{art}
+\begin{art}
+    La giocata di battuta compete al giocatore di mano che, generalmente, è libero di giocare qualsiasi carta; a ciascuno degli altri compete la giocata di risposta che obbliga sempre il giocatore a giocare, se ne possiede, una carta dello stesso palo della carta della giocata di battuta; le giocate di risposta devono essere eseguite ordinatamente in senso antiorario.
+\end{art}
+\begin{art}
+    Alla prima battuta è di mano il giocatore al quale tale diritto compete in base alle norme caratteristiche del gioco; ad ogni battuta successiva è di mano il giocatore che ha conquistato la battuta precedente.
+\end{art}
+\begin{art}
+    Prima di dare inizio alla battuta iniziale il giocatore di mano deve assicurarsi di aver ricevuto il giusto numero di carte e deve assicurarsi che la stessa verifica sia stata eseguita dagli altri giocatori; tali adempimenti rientrano nella fase della distribuzione per cui, ai fini del presente Codice, la passata ha inizio nel momento in cui un giocatore esegue una qualsiasi dichiarazione espressa o dà inizio alla prima battuta.
+\end{art}
+\begin{art}
+    Prima di dare inizio a ciascuna battuta successiva a quella iniziale il giocatore di mano deve attendere che la battuta precedente sia stata interamente raccolta e correttamente depositata.
+\end{art}
+\begin{art}
+    Ad ogni giocatore è consentito, prima che sia stata iniziata la battuta successiva, di rivedere la pigliata testè conclusasi (e non altre) da chiunque conseguita.
+\end{art}
+\begin{art}
+    La pigliata deve essere raccolta dal giocatore che la conquista e dallo stesso ordinatamente depositata innanzi a sé, salvo quanto diversamente previsto dalle norme caratteristiche dei vari giochi.
+\end{art}
+\begin{art}
+    Le giocate di risposta allo stesso palo della giocata di battuta devono essere eseguite rigorosamente con immediatezza, quelle di risposta ad un palo diverso (scarti) devono essere eseguite, per correttezza, senza immotivati indugi.
+\end{art}
+\begin{art}
+    La battuta è conquistata, o (come si dice più correttamente) è pigliata, dal giocatore che ha giocato la carta di grado maggiore tra quelle giocate al palo della giocata di battuta.
+\end{art}
+\begin{art}
+    Con la conquista della battuta il giocatore, o la Parte cui appartiene, conquista altresì le carte giocate, con i relativi valori.
+\end{art}
+\begin{art}
+    Con l'ultima pigliata il giocatore, o la Parte cui appartiene, conquista
+    un ulteriore punto.
+\end{art}
+\subsubsection{La passata: conclusione}
+\begin{art}
+    La passata si esaurisce con la giocata di tutte le carte ma si considera ufficialmente conclusa a tutti gli effetti solo dopo che sia stato accertato ed annotato il punteggio; dopodiché qualsiasi possibilità di contestare il risultato è prescritta.
+\end{art}
+\begin{art}
+    Se un giocatore mischia le carte prima che la passata sia ufficialmente conclusa, è obbligatorio tentare di sanare l'errore cercando di ricostruire in maniera sufficiente l'attribuzione dei punti ed anche, quando abbia importanza, la esatta successione temporale degli stessi; se la ricostruzione non è possibile, l'errore non è sanabile ed il responsabile dello stesso, o la parte cui appartiene, risponde dell'errore, anche se commesso in buona fede, riconoscendo all'avversario oltre ai punti accertati anche quelli controversi.
+\end{art}
+\begin{art}\label{err.pass}
+    Se l'errore di cui al precedente paragrafo non è sanabile ed è commesso da giocatori di entrambe le parti, la passata è annullata.
+\end{art}
+\begin{art}\label{passata.fine}
+    Nei giochi in cui le parti antagoniste sono più di due, se l'errore di
+    cui all'art.~\ref{err.pass} non è sanabile ed è commesso da più giocatori, i giocatori che hanno sbagliato rispondono dell'errore anche se commesso in buona fede.
+\end{art}
+\subsection{Le dichiarazioni}
+\begin{art}\label{diritto.dich}
+    Il diritto di eseguire una o più dichiarazioni espresse spetta solo al giocatore di mano, al quale non è però consentito di eseguire o completare alcuna dichiarazione dopo che abbia eseguito la giocata di battuta.
+\end{art}
+\begin{art}
+    Ciascuna dichiarazione può riferirsi: esplicitamente, al palo di pigliata o al palo al quale ci si accinge a giocare;  genericamente, ad uno o più pali.
+\end{art}
+\subsubsection{Dichiarazioni relative al palo di pigliata}
+\begin{art}
+    Con riferimento al palo di pigliata, le dichiarazioni consentite possono essere:
+    \begin{packeditem}
+\item      \emph{(ho fatto) questo piombo}, quando la presa sia stata effettuata con l'unica o con l'ultima carta del palo in suo possesso; oppure
+\item      \emph{(sono) liscio qui}, quando ancora si possegga almeno una carta soggetta rispetto alle carte possedute al palo dagli altri giocatori.
+    \end{packeditem}
+\end{art}
+\subsubsection{Dichiarazioni relative a pali diversi da quello di pigliata e
+di giocata}
+\begin{art}
+    Con riferimento ai pali diversi da quello di pigliata e da quello al quale ci si accinge a giocare, le dichiarazioni consentite sono:
+    \begin{packeditem}
+\item      \emph{feci un piombo}, per comunicare di aver esaurito le carte ad uno o più pali diversi da quelli ai quali si sia giocato prima della battuta nella quale il giocatore ha rilevato la mano.
+\item      \emph{(sono) faglio a un palo}, per comunicare che, in origine o (indistintamente) al momento della dichiarazione, si era o si è sprovvisti di carte ad uno o più pali.
+\item      \emph{faglio al (palo del) mio compagno}, per comunicare di non possedere alcuna carta al palo dove si ritiene che il compagno, attraverso accuse, sfide, o scarti dello stesso o per altre circostanze di gioco, abbia interesse; tale dichiarazione non è consentita se al palo si posseggono solo carte sovrane.
+\item      \emph{liscio al (palo del)  mio compagno}, per comunicare il possesso di almeno una carta non sovrana al palo dove si ritiene che il compagno, attraverso accuse, sfide o scarti dello stesso o per altre circostanze di gioco, abbia interesse.
+    \end{packeditem}
+\end{art}
+\begin{art}
+    L'erronea dichiarazione di faglio o di liscio al palo del compagno eseguita in buona fede non è sanzionabile.
+\end{art}
+\subsubsection{Dichiarazioni relative al palo di giocata}
+\begin{art}
+    Con riferimento al palo al quale ci si accinge a giocare, è consentito dichiarare:
+    \begin{packeditem}
+\item      il possesso di una Napoletana;
+\item      il possesso di un gruppo di due carte di tressette;
+\item      il possesso di una singola carta di tressette;
+\item      il possesso del Re;
+\item      l'eventuale grado sovrano della carta che si gioca;
+\item      la semplice lunghezza del palo.
+    \end{packeditem}
+\end{art}
+\paragraph{La dichiarazione della Napoletana}
+\begin{art}
+    Il giocatore che intende dichiarare il possesso di una Napoletana al palo di giocata può farlo espressamente, giocando una qualsiasi carta e precisando la lunghezza del palo.
+\end{art}
+\paragraph{Le sfide}
+\begin{art}
+    Si definisce sfida una dichiarazione relativa ad un palo con due carte di tressette o ad un palo almeno terzo con una sola carta di tressette.
+\end{art}
+\begin{art}
+    Se si possiede una sola di carta di tressette di un palo almeno terzo, la sfida può essere lanciata giocando qualsiasi carta semplice.
+\end{art}
+\begin{art}
+    Se si posseggono due carte di tressette (che vanno entrambe dichiarate):
+    \begin{packeditem}
+\item se il palo è secondo, la dichiarazione comporta l'obbligo di giocare quella superiore, salvo che il palo sia costituito dal Venticinque, nel qual caso a tale obbligo si sostituisce quello di dover giocare le due carte l'una di seguito all'altra;
+\item se il palo dichiarato è terzo, resta solo esclusa la possibilità di giocare una carta semplice;
+\item  se il palo è più che terzo, si può eseguire la dichiarazione giocando qualsiasi carta. 
+    \end{packeditem}
+\end{art}
+\paragraph{La dichiarazione del Re}
+\begin{art}
+    La dichiarazione relativa al possesso del Re, senza giocarlo, è consentita solo giocando una carta semplice di un palo almeno terzo senza carte di tressette.
+\end{art}
+\begin{art}
+    Chi esegue la dichiarazione di sovranità deve sempre precisare la lunghezza del palo.
+\end{art}
+\paragraph{La semplice dichiarazione di lunghezza del palo}
+\begin{art}
+    La semplice dichiarazione di lunghezza del palo non può essere eseguita se tra le carte non giocate ve ne sia una di tressette o il Re.
+\end{art}
+\begin{art}
+    Se si dichiara un palo secondo è obbligatorio giocare la carta di grado superiore, anche se le due carte sono consecutive di grado.
+\end{art}
+\begin{art}
+    Se si vuol rendere noto lo stato di unica o di ultima carta del palo a cui si gioca, è sufficiente dichiarare \emph{sola}, sia che si tratti di carta soggetta, sia che si tratti di carta sovrana; nel secondo caso, però, è possibile dichiarare \emph{piombo}.
+\end{art}
+\subsubsection{Altre norme concernenti le dichiarazioni relative al palo di
+giocata}
+\begin{art}
+    Se una qualsiasi dichiarazione viene eseguita senza precisare la lunghezza del palo, si sottintende che il palo sia esattamente terzo; se il palo è quarto o più che quarto, occorre precisare ulteriormente la dichiarazione aggiungendo alla stessa, rispettivamente: \emph{lungo} o  \emph{lunghissimo}.
+\end{art}
+\begin{art}
+    Il giocatore che non reputi opportuno condizionare la propria giocata all'integrale rispetto delle norme contenute nei precedenti articoli, deve  rinunciare ad eseguire la dichiarazione relativa al palo di giocata.
+\end{art}
+\begin{art}
+    Nel lanciare una sfida e, più in generale, nell'eseguire una qualsiasi dichiarazione, occorre usare le espressioni, anche di tipo gestuale, in uso al tavolo.
+    Se al tavolo si utilizzano, per la stessa fattispecie dichiarativa, più espressioni alternative, è corretto che ciascun giocatore adoperi sempre la stessa espressione; ciò al fine di non generare il dubbio che a dichiarazioni variamente formulate corrispondano fattispecie secondarie diverse che non possono essere palesate.
+\end{art}
+\begin{art}\label{fine.dich}
+    Altre norme riportate nelle successive parti del codice prevedono limitazioni alla possibilità di eseguire le precedenti dichiarazioni.
+\end{art}
+\section{Le anomalie}
+\subsection{Casistica delle anomalie}
+\begin{art}
+    Nel corso del gioco possono verificarsi, indipendentemente dalla buona fede dei giocatori, i seguenti tipi di anomalie:
+    \begin{packeditem}
+\item errore o irregolarità in una delle fasi propedeutiche alla passata;
+\item errore del giocatore che si renda impropriamente di mano;
+\item esecuzione di dichiarazioni non consentite, o eseguite in maniera difforme o eseguite intempestivamente;
+\item incompatibilità della carta giocata rispetto alla dichiarazione relativa al palo di giocata;
+\item giocata di risposta eseguita scartando la carta di un altro palo pur essendo il giocatore in possesso di una carta di risposta al palo di battuta;
+\item  giocata di risposta al palo non eseguita con immediatezza;
+\item giocata seppure formalmente corretta ma eseguita inequivocabilmente in maniera tale da richiamare sulla stessa l'attenzione di un compagno;
+\item errore materiale consistente nel rendere visibile una o più carte diverse dalla carta giocata o nel rilasciare inavvertitamente sul tavolo più carte in luogo di una;
+\item   confusione delle prese tale da non rendere possibile l'esatto computo dei punti;
+\item   errore nel computo o nell'annotazione del punteggio;
+\item altre anomalie che possono verificarsi tenendo conto delle caratteristiche proprie di ciascun gioco, delle specificità dei giochi che possono svolgersi con differenti modalità, delle possibili opzioni di gioco, delle norme speciali che regolamentano il gioco ai vari livelli di svolgimento.
+    \end{packeditem}
+\end{art}
+\subsection{Emersione delle anomalie}
+\begin{art}
+    Qualsiasi anomalia produce effetti solo se è tempestivamente rilevata; pertanto, se l'anomalia non è rilevata affatto, la stessa s'intende sanata (sanatoria implicita) mentre se è rilevata con anticipo o con ritardo rispetto ai termini espressamente previsti, la rilevazione intempestiva dà luogo ad una differente anomalia i cui effetti si sostituiscono a quelli previsti per l'anomalia originaria.
+\end{art}
+\begin{art}\label{emersione.anomalie}
+    L'anomalia originaria può emergere:
+    \begin{packeditem}
+\item  per constatazione, da parte di uno qualsiasi dei giocatori, quando una giocata o una dichiarazione precedente risulti incompatibile con l'evidenza di giocate o dichiarazioni successive;
+\item  per ravvedimento, da parte del giocatore responsabile dell'errore;
+\item  per palesamento, da parte di un compagno del giocatore responsabile dell'errore;
+\item  per contestazione, da parte di un avversario del giocatore responsabile dell'errore.
+    \end{packeditem}
+\end{art}
+\begin{art}
+    Una volta che l'anomalia sia stata rilevata, a nessuno è consentito, per un inutile ricadimento, di dichiarare le proprie carte.
+\end{art}
+\begin{art}
+    Chi rileva erroneamente (in una qualsiasi delle modalità indicate
+    all'art.~\ref{emersione.anomalie}) un'anomalia inesistente, commette un errore che può essere sanzionato.
+\end{art}
+\begin{art}
+    In presenza di una possibile constatazione resta esclusa qualsiasi altra forma di rilevazione di un'anomalia.
+\end{art}
+\begin{art}
+    Se una anomalia viene rilevata contemporaneamente in più di una delle modalità elencate al terzo capoverso del presente articolo, la stessa si considera rilevata con la modalità utilizzata che, in tale elenco, precede le altre.
+\end{art}
+\begin{art}
+    L'anomalia per rilevazione intempestiva può essere rilevata a sua volta solo per contestazione da parte di un avversario.
+\end{art}
+\subsection{Effetti delle anomalie}
+\begin{art}
+    La natura dell'anomalia, unitamente alla modalità di rilevazione della stessa, determinano, nei vari giochi, differenti effetti, quali:
+    \begin{packeditem}
+\item      la correzioni dell'errore con sanatoria esplicita (definitiva o sospesa) dello stesso;
+\item      la correzione dell'errore senza sanatoria e con previsione, quindi, di onere o penale a carico della parte colpevole;
+\item      l'annullamento della passata (c.d. andata a monte), con ripetizione della stessa ed eventuale attribuzione di indennizzo per la parte innocente e/o di penalità per la parte colpevole;
+    \end{packeditem}
+\end{art}
+\subsubsection{Correzione dell'anomalia con sanatoria esplicita}
+\begin{art}
+    La correzione dell'errore con sanatoria esplicita (definitiva o sospesa) consiste nella rettifica della dichiarazione o della giocata errata a seguito della quale gli avversari che seguono di giro hanno il diritto di sostituire la carta precedentemente giocata.
+\end{art}
+\begin{art}\label{san.espl}
+    La sanatoria esplicita definitiva è prevista quando si correggono irregolarità che appaiono ininfluenti o quasi del tutto ininfluenti sul regolare svolgimento del gioco; è obbligatoria se è prevista dal codice o facoltativa se il codice prevede che ad essa si possa addivenire per il comune accordo di tutti i giocatori; in entrambi i casi, una volta applicata, produce effetti irreversibili anche se il successivo andamento del gioco dimostra che l'irregolarità così sanata è risultata influente sull'andamento del gioco.
+\end{art}
+\begin{art}
+    La sanatoria esplicita sospesa è prevista quando si correggono irregolarità che potrebbero influire sul successivo svolgimento del gioco; si determina allorché uno degli avversari di chi ha commesso l'irregolarità accompagna la correzione della stessa con una dichiarazione di riserva di verifica che l'irregolarità, sia pur rettificata, non determini successivamente effetti negativi per la sua parte; se tale riserva viene espressa anche da un solo giocatore, resta definitivamente esclusa la possibilità di addivenire ad una sanatoria esplicita definitiva. Al verificarsi dell'ipotizzato effetto negativo, il giocatore che aveva espresso la riserva deve immediatamente eccepire che la sanatoria è inammissibile e che, quindi, andrà applicata la conseguenza prevista in via subordinata dal codice; in mancanza, e senza che altri possano eccepire alcunché, la sanatoria sospensiva si trasforma in definitiva.
+\end{art}
+\subsubsection{Correzione dell'anomalia senza sanatoria}
+\begin{art}
+    Il codice prevede determinati casi nei quali, dopo che si sia proceduto
+    alla rettifica dell'errore come indicato all'art.~\ref{san.espl}, non si può dar luogo ad alcuna sanatoria; in questi casi è il codice stesso che stabilisce oneri e/o penali a carico della parte che ha commesso l'errore.
+\end{art}
+\subsubsection{Andata a monte con ripetizione della passata}
+\begin{art}
+    L'annullamento della passata in corso, con ripetizione della stessa, può avvenire:
+    \begin{packeditem}
+\item      obbligatoriamente, su iniziativa di qualsiasi giocatore, in tutti i casi di irregolarità verificatesi nelle fasi propedeutiche alla passata stessa;
+\item      obbligatoriamente, su iniziativa di qualsiasi giocatore della parte incolpevole, in determinati altri casi espressamente previsti dal codice;
+\item       come conseguenza prevista dal codice (e tempestivamente fatta valere da chi aveva espresso la riserva) di una sanatoria sospesa risultata inammissibile;
+\item      per iniziativa individuale di un giocatore, nei casi in cui il codice espressamente gli accorda tale diritto.
+    \end{packeditem}
+\end{art}
+\begin{art}
+    Il diritto di andare a monte si estrinseca sempre in una facoltà individuale e perfetta che non deve e non può essere esercitata previo consulto con altri giocatori; pertanto, se nessuno la esercita, l'errore s'intende sanato.
+\end{art}
+\begin{art}
+    In tutti i casi, dopo che la passata è stata annullata il gioco deve riprendere come se la stessa non fosse mai stata iniziata.
+\end{art}
+\section{Norme generali di comportamento}
+\subsection{Comportamento dei giocatori}
+\begin{art}
+    Il giocatore di tressette è obbligato a mantenere durante tutto il tempo dell'incontro, e in particolare durante le fasi attive di gioco, un atteggiamento sereno ed un comportamento gentile e rispettoso verso compagni e avversari.
+\end{art}
+\begin{art}
+    Nelle fasi attive di gioco il giocatore è altresì obbligato:
+    \begin{packeditem}
+\item      a rimanere impassibile, contenendo la propria soddisfazione o il proprio disappunto, sia in relazione alle carte possedute, sia in relazione alle giocate eseguite dagli altri giocatori, sia in relazione all'esito di ciascuna giocata;
+\item      a tenere le carte in modo che non possano essere lette dagli altri giocatori;
+\item      a giocare generalmente con speditezza tale da non rendere il gioco opprimente;
+\item      ad eseguire giocate e risposte in maniera sempre pacata ed uniforme;
+\item      ad astenersi da qualsiasi tipo di commento fino al termine della passata;
+\item       a prestare la dovuta attenzione al fine di non incorrere in errori che, pur se sanabili, incidono sempre negativamente sul regolare andamento del gioco;
+\item      ad accettare serenamente le eventuali sanzioni, previste dal codice anche per i casi di irregolarità commesse in buona fede, evitando di richiederne agli avversari la mancata applicazione.
+    \end{packeditem}
+\end{art}
+\begin{art}
+    Il giocatore ripetutamente responsabile di comportamenti non corretti può
+    essere sanzionato, indipendentemente da quanto previsto negli articoli
+    seguenti per le singole irregolarità, con il richiamo, con la diffida, con
+    l'allontanamento dal tavolo, con il deferimento --- per i Tesserati --- agli Organi di Giustizia della Fitres.
+\end{art}
+\subsection{Comportamento degli spettatori}
+\begin{art}
+    La presenza al tavolo di spettatori è possibile alle seguenti condizioni:
+    \begin{packeditem}
+\item      che non sia negata da più della metà dei giocatori:
+\item      che il numero degli spettatori non sia superiore a due;
+\item      che per ogni spettatore ci sia l'assunzione di responsabilità da parte di uno, e uno solo, dei giocatori.
+    \end{packeditem}
+\end{art}
+\begin{art}
+    Lo spettatore, una volta ammesso al tavolo, non può esserbe allontanato senza validi motivi.
+\end{art}
+\begin{art}
+    Lo spettatore, pena il possibile allontanamento dal tavolo, deve osservare i seguenti obblighi:
+    \begin{packeditem}
+\item      deve restare seduto alla sinistra del giocatore che ne ha assunto la responsabilità (o alla sua destra se questi tiene le carte con la mano destra);
+\item      non deve chiedere all'altro giocatore a lui vicino di mostrargli le proprie carte;
+\item      deve restare assolutamente in silenzio ed impassibile durante le fasi attive del gioco;
+\item      deve astenersi dall'effettuare suggerimenti o commenti, anche se richiestigli;
+\item      deve limitarsi, a passata conclusa, ad esprimere, con moderazione e se richiestogli, il suo parere;
+\item        non deve denunciare, se non a passata conclusa, eventuali irregolarità successive alle fasi preliminari della passata.
+    \end{packeditem}
+\end{art}
+\begin{art}
+    Del comportamento dello spettatore risponde, sia agli effetti regolamentari che a quelli disciplinari, il giocatore che ne ha assunto la responsabilità.
+\end{art}
+\section{Norme generali finali}
+\begin{art}
+    L'intero codice è destinato a definire le corretta procedure e a provvedere adeguati rimedi per ogni infrazione alle procedure stesse; esso è principalmente destinato non a punire gli errori ma a riparare i danni che conseguono ad un errore o ad una irregolarità.
+\end{art}
+\begin{art}
+    L'applicazione formale delle norme contenute nel presente Codice non può andare disgiunta dall'obbligo generale di correttezza e di buona fede.
+\end{art}
+\begin{art}
+    I principi generali che hanno ispirato il presente Codice nel prevedere l'effetto conseguente al verificarsi di una anomalia sono i seguenti:
+    \begin{packeditem}
+\item  presumere sempre, salva evidenzia contraria, che l'errore sia stato commesso in buona fede;
+\item  perseguire innanzitutto lo scopo di salvare la passata o la partita;
+\item  evitare il più possibile che l'errore, anche se commesso in buona fede, cagioni conseguenze negative alla parte innocente e/o infligga  penalizzazioni eccessive alla parte colpevole.
+    \end{packeditem}
+\end{art}
+\begin{art}
+    Il giocatore deve essere pronto a subire serenamente le conseguenze dei rimedi previsti anche quando, come è possibile che si verifichi, il rimedio così come prefigurato in via generale gli risulti, nel caso concreto, ingiustamente penalizzante.
+\end{art}
+\section{Penalità}
+\begin{art}
+    I giocatori responsabili di anomalie non sanabili o violazioni delle norme sul
+    comportamento sono puniti con una penalità di 3 punti.
+\end{art}
+\chapter{Il tressette classico}
+\subsection{Numero e posizione dei giocatori}
+\begin{art}
+Nei giochi di tressette si affrontano quattro giocatori schierati in due
+coppie contrapposte, a ciascuno dei quali il cartaro deve distribuire dieci carte frazionate in due gruppi di cinque.
+\end{art}
+\begin{art}
+La funzione di cartaro in occasione della prima smazzata dell'incontro compete al giocatore designato dalla sorte o a quello più giovane; nelle smazzate successive tale funzione compete al giocatore seduto a sinistra di quello al quale spetta principiare la prima battuta della passata.
+\end{art}
+\subsection{La partita}
+\begin{art}
+Vince la partita la coppia che raggiunge prima dell'altra il punteggio di 77
+punti.
+\end{art}
+\section{Gioco Ordinario: norme moderne}
+\subsection{Norme che regolano le attività preliminari e norme che regolano le giocate}
+\begin{art}
+Si richiamano ed integralmente si confermano le disposizioni degli articoli
+da~\ref{passata.iniz} a~\ref{passata.fine} del presente Codice, fatta esclusione per quelle norme eventualmente in contrasto con quanto ulteriormente o diversamente sancito nei seguenti articoli.
+\end{art}
+\begin{art}
+Per battuta s'intende il complesso di quattro carte delle quali la prima rappresenta la giocata di battuta e le altre tre le giocate di risposta; la battuta inizia ufficialmente con la giocata o con qualsiasi altra dichiarazione eseguita dal giocatore di mano e cessa con il deposito della pigliata.
+\end{art}
+\begin{art}
+La pigliata deve essere sempre raccolta dal giocatore che la conquista e dallo stesso ordinatamente depositata:
+\begin{packeditem}
+\item innanzi a sé, se trattasi della prima pigliata conquistata, nella passata, da lui o dal suo compagno;
+\item sulle precedenti pigliate della coppia, per le pigliate successive alla prima.
+    \end{packeditem}
+\end{art}
+\begin{art}
+Le carte vanno rimischiate e la distribuzione ripetuta:
+\begin{packeditem}
+\item    qualora i giocatori non siano tutti presenti, poiché gli assenti verrebbero ad essere privati della facoltà di mischiare anch'essi le carte prima della distribuzione;
+\item    qualora durante la distribuzione si scopra anche una sola carta semplice.
+\item    qualora ne cada qualcuna sul pavimento, anche quando non si vede quale sia;
+\item    qualora uno dei giocatori riceva un numero di carte diverso da quello previsto o, pur nel numero esatto, le riceva con modalità diverse da quelle previste.
+\item      quando, a gioco in corso, venga riscontrato che un giocatore aveva ricevuto un numero di carte inferiore o superiore a quello previsto.
+    \end{packeditem}
+\end{art}
+\subsection{Norme che regolano la messa a terra}
+\begin{art}\label{messa.terra}
+La messa a terra è l'azione con la quale il giocatore che detiene la mano, o che è chiamato a rispondere su di una giocata iniziata da un altro giocatore, cala sul tavolo tutte le proprie carte rivendicandone la sovranità.
+\end{art}
+\begin{art}\label{terra1}
+Non può essere eseguita dal giocatore in attesa di rilevare la mano mediante la giocata del proprio compagno, quand'anche risultasse assolutamente irrilevante la carta giocata da quest'ultimo perché tutte gli consentirebbero in qualsiasi momento di prendere la mano.
+\end{art}
+\begin{art}\label{terra2}
+La messa a terra è valida ed efficace solo al verificarsi delle seguenti condizioni:
+\begin{packeditem}
+\item      l'azione, ai sensi di quanto sancito ai punti precedenti, non deve essere stata intempestiva; resta però valida se, eseguita a battuta iniziata ed erroneamente in anticipo rispetto al compagno, si verifichi irrilevante la carta di risposta di quest'ultimo;
+\item      tra le carte messe a terra non ve ne deve essere alcuna che possa rimanere soggetta, neanche rispetto al compagno; in altre parole, tutte le carte,  giocate in ordine decrescente devono consentire allo stesso (e non anche al compagno), qualsiasi sia l'ordine in cui possano essere giocate le carte di risposta dagli altri tre giocatori, di effettuare tutte le pigliate rimanenti;
+\item       la condizione sub b. deve resistere alla prova contraria anche nell'ipotesi che le (sole) carte incognite degli altri tre giocatori fossero distribuite tra gli stessi in maniera diversa da quella effettiva.
+    \end{packeditem}
+\end{art}
+\begin{art}
+In caso di messa a terra intempestiva (condizione sub a.) gli avversari hanno il diritto di annullare la passata.
+\end{art}
+\begin{art}\label{fine.terra}
+Se la messa a terra è risultata non valida per il mancato verificarsi della condizione sub b. o della condizione sub c., il giocatore è obbligato a ritirare le carte e, tenendole scoperte innanzi a sé, a rigiocarle - come si dice - a meglio a meglio, ossia l'una dopo l'altra con ordine decrescente, ma con libertà di scelta tra due carte dello stesso grado; tale obbligo cessa nel momento in cui la mano sia rilevata dal compagno o dagli avversari.
+Inoltre, se nel corso delle battute successive la mano viene presa dal compagno di chi aveva effettuato la messa a terra per errore, anche questi, finché resta di mano, dovrà giocare le proprie carte con la sopra indicata modalità.
+\end{art}
+\subsection{Norme che regolano le dichiarazioni}
+\begin{art}
+Si considerano conformi le sole dichiarazioni che, oltre ad essere sostanzialmente corrette, siano anche effettuate in modo chiaro ed utilizzando le formule espressamente previste; a fronte di dichiarazioni conformi non è consentito a nessun giocatore d'interrompere il gioco per chiedere ulteriori precisazioni.
+\end{art}
+\begin{art}
+In caso di dichiarazione non conforme, e anche quando la stessa sia
+effettuata in forma non verbale, per quanto ammessa, ciascun giocatore ha il
+diritto, prima di giocare la sua carta di risposta, di chiedere che il
+giocatore precisi la sua dichiarazione e che, eventualmente, la corregga. Se
+a seguito della correzione la dichiarazione risulta sostanzialmente errata,
+si applica quanto previsto al~\ref{emersione.anomalie}.
+\end{art}
+\begin{art}\label{classic.dich}
+S'intende qui confermato e richiamato l'intero contenuto degli articoli
+da~\ref{diritto.dich} a~\ref{fine.dich} del presente Codice, fatta esclusione per quelle norme eventualmente in contrasto con quanto ulteriormente o diversamente sancito negli articoli che seguono.
+\end{art}
+\begin{art}
+Il giocatore che inizia tacitamente una battuta con una carta (semplice o di
+Tressette) piombo, sola, lisciante, terza, lunga o lunghissima non può
+palesare neppure parzialmente lo stato del palo dopo che abbia eventualmente
+conquistata la pigliata, e cioè non può dire, accingendosi a giocare ad
+altro palo: \emph{ho fatto questo piombo} oppure \emph{sono liscio qui}.
+\end{art}
+\begin{art}
+    Il giocatore che abbia principiato la battuta in silenzio, ossia senza averla accompagnata con la dichiarazione relativa al palo di giocata, non può più, finché è di mano, eseguire nessuna dichiarazione relative a tale palo.
+\end{art}
+\begin{art}
+Il giocatore che abbia principiato la battuta in silenzio potrà, riprendendo successivamente la mano su una giocata da altri
+iniziata, anche ad un diverso palo, regolarmente riferirsi al palo al quale
+aveva giocato in silenzio utilizzando una delle formule di cui
+al~\ref{classic.dich.list}.
+\end{art}
+\begin{art}
+L'eventuale dichiarazione relativa al palo di pigliata può essere eseguita solo al momento in cui la pigliata è raccolta e depositata e mai dopo che sia stata eseguita un'altra dichiarazione relativa ad un altro palo o che sia stata iniziata la battuta successiva.
+\end{art}
+\begin{art}
+Il giocatore che abbia dichiarato di essere liscio al palo di pigliata è obbligato a principiare la battuta successiva giocando ad un altro palo.
+\end{art}
+\begin{art}
+L'eventuale dichiarazione relativa ad un palo diverso da quello di pigliata e da quello di giocata può essere eseguita solo prima dell'eventuale dichiarazione relativa al palo di giocata o della giocata eseguita senza alcuna dichiarazione.
+\end{art}
+\begin{art}
+Tutte le dichiarazioni di \emph{faglio} e la dichiarazione \emph{feci un piombo} non sono consentite se riferite ad un palo al quale lo stato di piombo del giocatore è notorio in virtù delle sue giocate o, anche, in virtù delle carte uscite e/o delle dichiarazioni al palo eseguite da tutti i giocatori.
+\end{art}
+\begin{art}
+La dichiarazione di \emph{liscio al mio compagno} non è consentita se il possesso di almeno una carta che giustificherebbe tale dichiarazione è notorio in virtù delle carte uscite e/o delle dichiarazioni al palo eseguite da tutti i giocatori.
+\end{art}
+\begin{art}
+L'eventuale dichiarazione relativa al palo di giocata, che preclude l'esecuzione di ulteriori dichiarazioni, può essere eseguita solo prima della giocata o contemporaneamente ad essa.
+\end{art}
+\begin{art}
+Il giocatore che abbia effettuato una dichiarazione relativa al palo di giocata non può più nel corso dell'intera passata rilasciare dichiarazioni che si riferiscano allo stesso palo, fatta salva l'ipotesi contemplata nell'articolo seguente.
+\end{art}
+\begin{art}
+Il giocatore che abbia effettuato una qualsiasi dichiarazione di lunghissimo può sempre comunicare l'eventuale stato ancora lunghissimo dello stesso palo.
+\end{art}
+\begin{art}
+La dichiarazione di sovranità della carta giocata non è consentita se lo stato di sovranità è notorio.
+\end{art}
+\begin{art}\label{classic.dich.list}
+Le dichiarazioni possibili con riferimento al palo di giocata sono le seguenti:
+\begin{packedenum}
+\item \emph{sola},  giocando l'unica o l'ultima carta del palo, purché non sovrana
+\item \emph{piombo},  giocando l'unica o l'unica carta del palo se trattasi di carta (anche notoriamente) sovrana
+\item \emph{si liscia},  giocando la carta di tressette (sovrana o soggetta) o, comunque, la carta di grado superiore (sovrana o soggetta) ad un palo ove è presente solo un'altra carta semplice
+\item \emph{terzo},  giocando una carta sovrana o soggetta ad un palo ove siano presenti altre due carte semplici con esclusione del Re
+\item \emph{vero doppio liscio} o \emph{terzo di Re},  giocando una qualsiasi carta semplice di un palo terzo senza carte di tressette ma con il Re che non viene giocato
+\item \emph{è mia, terzo},  giocando una carta semplice soggetta esclusivamente ad una o ad entrambe le altre carte semplici possedute dal giocatore ad un palo terzo
+\item \emph{lungo},  giocando l'unica carta di tressette che si possiede ad un palo quarto, o il Re di un palo quarto senza carte di tressette, o una qualsiasi carta semplice di un palo quarto senza carte di tressette e senza il Re
+\item \emph{lungo, tutta la Napoletana} o \emph{lungo di Re},  giocando una qualsiasi carta semplice di un palo quarto senza carte di tressette con il Re che non viene giocato
+\item \emph{è mia, lungo},  giocando una carta semplice soggetta esclusivamente ad una o più delle altre carte semplici possedute dal giocatore ad un palo quarto
+\item \emph{lunghissimo},  giocando l'unica carta di tressette che si possiede ad un palo almeno quinto, o il Re di un palo almeno quinto senza carte di tressette, o una qualsiasi carta semplice di un palo almeno quinto senza carte di tressette e senza il Re
+\item \emph{lunghissimo tutta la Napoletana} o \emph{lunghissimo di Re},  giocando una qualsiasi carta semplice di un palo almeno quinto senza carte di tressette con il Re che non viene giocato
+\item \emph{è mia, lunghissimo},  giocando una carta semplice soggetta esclusivamente ad una o più delle altre carte semplici possedute dal giocatore ad un palo almeno quinto
+\item \emph{liscio e busso} o \emph{Asso terzo},  giocando una qualsiasi carta semplice di un palo terzo con l'Asso
+\item \emph{liscio e busso lungo} o \emph{Asso lungo},  giocando una qualsiasi carta semplice di un palo quarto con l'Asso
+\item \emph{liscio  busso lunghissimo} o \emph{Asso lunghissimo},  giocando una qualsiasi carta semplice di un palo almeno quinto con l'Asso
+\item \emph{ribusso} o \emph{Due terzo},  giocando una qualsiasi carta semplice di un palo terzo con il Due
+\item \emph{ribusso lungo} o \emph{Due lungo},  giocando una qualsiasi carta semplice di un palo quarto con il Due
+\item \emph{ribusso lunghissimo} o \emph{Due lunghissimo},  giocando una qualsiasi carta semplice di un palo almeno quinto con il Due
+\item \emph{busso} o \emph{Tre terzo},  giocando una qualsiasi carta semplice di un palo terzo con il Tre
+\item \emph{busso lungo} o \emph{Tre lungo},  giocando una qualsiasi carta semplice di un palo quarto con il Tre
+\item \emph{busso lunghissimo} o \emph{Tre lunghissimo},  giocando una qualsiasi carta semplice di un palo almeno quinto con il Tre
+\item \emph{liscio, la migliore} o \emph{ventotto piombo},  giocando il due di un ventotto piombo
+\item \emph{doppio liscio, la migliore} o \emph{ventotto terzo},  giocando il Due o l'Asso di un ventotto terzo
+\item \emph{la migliore, lungo} o \emph{ventotto lungo},  giocando una qualsiasi carta di un ventotto lungo
+\item \emph{la migliore, lunghissimo} o \emph{ventotto lunghissimo},  giocando una qualsiasi carta di un ventotto lunghissimo
+\item \emph{liscio, la buona} o \emph{ventinove piombo},  giocando il Tre di un ventinove piombo
+\item \emph{doppio liscio, la buona} o \emph{ventinove terzo},  giocando il Tre o l'Asso di un ventinove terzo
+\item \emph{la buona, lungo} o \emph{ventinove lungo},  giocando una qualsiasi carta del ventinove lungo
+\item \emph{la buona, lunghissimo} o \emph{ventinove lunghissimo},  giocando una qualsiasi carta di un ventinove lunghissimo
+\item \emph{è mio, liscio e piombo} o \emph{venticinque piombo},  giocando consecutivamente il Due ed il Tre (nell'ordine) di un venticinque piombo
+\item \emph{è mio, terzo} o \emph{terzo, voglio l'Asso},  giocando il Due di un venticinque terzo con o senza il Re
+\item \emph{è mio, lungo} o \emph{lungo, voglio l'Asso},  giocando una qualsiasi carta di un venticinque lungo con o senza il Re
+\item \emph{è mio, lunghissimo} o \emph{lunghissimo, voglio l'Asso},  giocando una qualsiasi carta di un venticinque lunghissimo con o senza il Re.
+\end{packedenum}
+\end{art}
+\subsection{Il Buongioco}
+\begin{art}
+    Ha \emph{buongioco} il giocatore che possiede una o più combinazioni di carte ciascuna delle quali è costituita da una napoletana o da almeno tre carte di tressette dello stesso grado; una carta di tressette può essere presente in entrambe le combinazioni.
+\end{art}
+\begin{art}
+In ordine al buongioco, la dichiarazione è consentita, ma non si assegnano
+punti addizionali. Ovvero il buongioco
+può essere dichiarato (anche solo parzialmente) ma, comunque, non si intende
+accusato.
+\end{art}
+\end{document}
